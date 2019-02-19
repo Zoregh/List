@@ -1,0 +1,10 @@
+<div *ngFor="let comp of service.filteredProducts" class="card flex-row flex-wrap border border-success rounded m-3">
+  <div class="card-header border-0 bg-white">
+      <img src="{{comp.image}}" alt="Pc image"  style="max-height: 150px;">
+  </div>
+  <div class="card-block px-2 my-auto">
+      <h4 class="card-title text-capitalize">{{comp.name}}</h4>
+      <p class="card-text">{{comp.price}} $</p>
+      <a [routerLink]="['/product',comp.id]" class="btn btn-outline-dark mb-2">Details</a>
+  </div>
+</div>

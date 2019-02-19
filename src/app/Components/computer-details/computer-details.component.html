@@ -1,0 +1,11 @@
+<div class="card flex-row flex-wrap border border-success rounded m-3">
+    <div class="card-header border-0 bg-white mx-auto">
+        <img class="img-fluid" src="{{currentComp.image}}" alt="Pc image">
+    </div>
+    <div class="card-block text-center my-auto mx-auto">
+        <h1 class="card-title text-capitalize">{{currentComp.name}}</h1>
+        <h2 class="card-text">{{currentComp.price}} $</h2>
+        <h3>{{currentComp.about}}</h3>
+        <a (click)="onGoBack()" type="button" class="btn btn-outline-dark mb-2 mt-5">Go back</a>
+    </div>
+  </div>
