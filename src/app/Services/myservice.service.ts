@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../Models/product';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class MyserviceService {
   ];
 
 
-  constructor() { 
+  constructor(private router: Router) { 
     this.filteredProducts = this.computers;
   }
 
@@ -47,6 +48,12 @@ export class MyserviceService {
     setTimeout(() => { //whithout this method this code isn't working in dev mode 
       this.showHide = !this.showHide;
     }, 0);
+  }
+
+  public onGoBack() {
+    this.filteredProducts = this.computers;
+    this.show();
+    this.router.navigate([""]);
   }
 
 }

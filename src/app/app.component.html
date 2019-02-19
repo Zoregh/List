@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-dark justify-content-start sticky-top">
-    <a routerLink="" class="navbar-brand text-info">PC SHOP</a>
-    <form *ngIf="service.showHide" class="form-inline w-50">
-      <input (input)="service.onKey($event)" class="form-control mr-sm-2 text-info" type="search" placeholder="Search" aria-label="Search">
-    </form>
-  </nav>
+  <a (click)="service.onGoBack()" class="btn btn-outline-dark text-info">PC SHOP</a>
+  <form *ngIf="service.showHide" class="form-inline w-50">
+    <input (input)="service.onKey($event)" class="form-control mr-sm-2 text-info" type="search" placeholder="Search" aria-label="Search">
+  </form>
+</nav>
 <router-outlet></router-outlet>
