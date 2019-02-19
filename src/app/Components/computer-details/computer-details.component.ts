@@ -22,6 +22,7 @@ export class ComputerDetailsComponent implements OnInit {
   }
 
   public onGoBack() {
+    this.service.filteredProducts = this.service.computers;
     this.service.show();
     this.router.navigate([""]);
   }
